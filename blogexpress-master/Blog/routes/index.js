@@ -8,11 +8,6 @@ let filepath = path.join(__dirname,'data.json');
 let filecontent = fs.readFileSync(filepath);
 let jsonobj = JSON.parse(filecontent);
 
-/* GET home page. */
-router.get('/', function(req, res, next) {
-  res.render('index', { title: 'Express' });
-});
-
 router.get('/login', function(req, res, next) {
   res.render('login');
 });
